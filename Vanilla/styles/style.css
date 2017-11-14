@@ -15,10 +15,11 @@ html,body, main{
 
 section{
 	height:100%;
-
+	/*min-height: 700px;*/
+	min-width:500px;
 	/*margin-bottom: 20%;*/
 
-	background-color: #5F5F5F;
+	background-color: #050505;
 
 	text-align: center;
 }
@@ -29,20 +30,89 @@ section header{
 
 
 /*INTRO*/
-#introWrap{
-	position:relative;
-	top:25%;
-	height: 75%;
+
+#intro{
+	color:white;
+	line-height: 3em;
 }
 
-.introMask{
+.introAnimationWrap{
+	margin:auto;
+	padding:25px;
+
+	position:relative;
+	top:25%;
+
 	height:50%;
-	width:100%;
+	min-height: 250px;
+	width:90%;
+
+	text-align: center;
+	
+	border: 5px solid white;
+	/*background-color: green;*/
+
+}
+
+.introAnimationWrap h3{
+	font-size: 24px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	/*background-color: black;*/
+	/*opacity: .8;*/
+	width:300px;
+	margin:auto;
 }
 
 svg{
 	height:100%;
 	width:100%;
+	min-width: 400px;
+	max-height: 400px;
+}
+
+.introButtons{
+	width:100%;
+	position:relative;
+	top:30%;
+}
+
+
+.introButtons h3{
+	width:100%;
+	position:relative;
+	top:30%;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: 1px;
+
+	background-color: #050505;
+	opacity: .7;
+	width:300px;
+	margin:auto;
+}
+
+.introShade{
+	position: absolute;
+	top: 0;
+	left:0;
+	height:100%;
+	width:100%;
+	
+	max-height: 400px;
+
+	background-color: white;
+	opacity: .1;
+}
+
+
+.introShade2{
+	position: absolute;
+	top: 0;
+	height:100%;
+	width:100%;
+	background-color: #050505;
+	opacity: .1;
 }
 
 
@@ -55,13 +125,13 @@ svg{
 	overflow: hidden;
 }
 .diagonal{
-	background-color: #5F5F5F;
+	background-color: #0c0c0c;
 	transform: rotate(2deg) translate(-50px, 50px);
 	height:150px;
 	width:100%;
 }
 .diagonalR{
-	background-color: #5F5F5F;
+	background-color: #0c0c0c;
 	transform: rotate(-2deg) translate(50px, -100px);
 	height:150px;
 	width:100%;
