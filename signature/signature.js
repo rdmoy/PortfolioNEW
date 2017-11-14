@@ -29,7 +29,6 @@ function makepaths() {
 }
 
 
-
 /*
 var maskpaths[i] = {
 	name: "maskName",
