@@ -23,19 +23,31 @@ section{
 	text-align: center;
 }
 
-#intro div{
+section header{
+	background-color: white;
+}
+
+
+/*INTRO*/
+#introWrap{
 	position:relative;
 	top:25%;
 	height: 75%;
 }
 
 .introMask{
-	height:25%;
+	height:50%;
+	width:100%;
 }
 
-section header{
-	background-color: white;
+svg{
+	height:100%;
+	width:100%;
 }
+
+
+
+/*DIAGONALS*/
 
 .diagonals{
 	height:100px;
