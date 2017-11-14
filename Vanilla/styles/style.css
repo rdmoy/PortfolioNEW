@@ -11,6 +11,8 @@ html,body, main{
 
 	height:100%;
 	width:100%;
+
+	color: white;
 }
 
 section{
@@ -18,7 +20,7 @@ section{
 
 	/*margin-bottom: 20%;*/
 
-	background-color: #5F5F5F;
+	background-color: #050505;
 
 	text-align: center;
 }
@@ -29,21 +31,68 @@ section header{
 
 
 /*INTRO*/
-#introWrap{
+.introWrap{
+	margin:auto;
+	padding:25px;
+
 	position:relative;
 	top:25%;
-	height: 75%;
-	background-image: url(images/chicagobw.gif);
+
+	height:50%;
+	max-height: 400px;
+	
+	text-align: center;
+	
+	border: 5px solid white;
+	/*background-color: green;*/
 }
 
-.introMask{
-	height:50%;
+.introShade{
+	position: absolute;
+	top: 0;
+	left:0;
+	height:100%;
 	width:100%;
+
+
+	background-color: white;
+	opacity: .1;
+}
+
+.introShade2{
+	position: absolute;
+	top: 0;
+	height:100%;
+	width:100%;
+	background-color: #050505;
+	opacity: .3;
+}
+
+.introWrap h3{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 40px;
+	text-shadow: 0px 0px 1px #5F5F5F;
+	letter-spacing: 2px;
+}
+
+.introWrap h3:first-child{
+	position: relative;
+	/*right:10%;*/
+}
+
+.introWrap h3 span{
+	width:500px;
+	font-size: 20px;
+	font-weight: 400;
+	text-shadow: 0 0 1px #5F5F5F;
 }
 
 svg{
 	height:100%;
 	width:100%;
+	min-width: 500px;
+	max-height: 400px;
 }
 
 
@@ -56,13 +105,13 @@ svg{
 	overflow: hidden;
 }
 .diagonal{
-	background-color: #5F5F5F;
+	background-color: #0c0c0c;
 	transform: rotate(2deg) translate(-50px, 50px);
 	height:150px;
 	width:100%;
 }
 .diagonalR{
-	background-color: #5F5F5F;
+	background-color: #0c0c0c;
 	transform: rotate(-2deg) translate(50px, -100px);
 	height:150px;
 	width:100%;
