@@ -103,7 +103,7 @@ svg{
 	/*max-height: 400px;*/
 
 	background-color: white;
-	opacity: .2;
+	opacity: .1;
 }
 
 
@@ -114,7 +114,7 @@ svg{
 	width:100%;
 	background-color: #050505;
 	/*background-color: green;*/
-	opacity: .2;
+	opacity: .1;
 	z-index: 1000;
 }
 
