@@ -17,15 +17,16 @@ section{
 	height:100%;
 	/*min-height: 700px;*/
 	min-width:500px;
-	/*margin-bottom: 20%;*/
-
 	background-color: #050505;
-
 	text-align: center;
 }
 
+#intro{
+	background: none;
+}
+
 section header{
-	background-color: white;
+	background-color: red;
 }
 
 
@@ -44,7 +45,7 @@ section header{
 	top:25%;
 
 	height:50%;
-	min-height: 250px;
+	min-height: 300px;
 	width:90%;
 
 	text-align: center;
@@ -115,8 +116,6 @@ svg{
 	opacity: .1;
 }
 
-
-
 /*DIAGONALS*/
 
 .diagonals{
@@ -125,25 +124,22 @@ svg{
 	overflow: hidden;
 }
 .diagonal{
-	background-color: #0c0c0c;
-	transform: rotate(2deg) translate(-50px, 50px);
+	background-color: #050505;
+	transform: rotate(2deg) translate(-50px, 100px);
 	height:150px;
 	width:100%;
 }
 .diagonalR{
-	background-color: #0c0c0c;
-	transform: rotate(-2deg) translate(50px, -100px);
+	background-color: #050505;
+	transform: rotate(-2deg) translate(50px, -50px);
 	height:150px;
 	width:100%;
 }
-.diag2{
-	background-color: white;
-}
 
-.diag2 .diagonal{
+.diagTop .diagonal{
 	transform: rotate(2deg) translate(50px, -100px);
 }
 
-.diag2 .diagonalR{
+.diagTop .diagonalR{
 	transform: rotate(-2deg) translate(-50px, -250px);
 }
