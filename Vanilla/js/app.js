@@ -1,7 +1,47 @@
+function initialize(){
+		fadeIn(introItems1, 0.5, 0.7)();
+		setTimeout(function(){
+			drawMask();
+			fadeIn(footButtons, .7, 0.3)();
+		},10.000);
+}
+var introItems1 = document.querySelectorAll(".introItem1");
+var footButtons = document.querySelectorAll(".footButtons span");
+
+function fadeIn(element, initDelay, otherDelay){
+
+	return function(){
+		var delay = initDelay;
+		for (var i=0; i< element.length; i++){
+			element[i].style.opacity="0";
+			/* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+			element[i].style.webkitAnimation="fadeIn ease 1"; 
+		    element[i].style.mozAnimation="fadeIn ease 1";
+		   	element[i].style.animation="fadeIn ease 1";
+
+		   	/* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+		    element[i].style.webkitAnimationFillMode="forwards"; 
+		    element[i].style.mozAnimationFillMode="forwards";
+		   	element[i].style.animationFillMode="forwards";
+
+		    element[i].style.webkitAnimationDuration="1s";
+		    element[i].style.mozAnimationDuration="1s";
+		   	element[i].animationDuration="1s";
+
+		   	var theDelay = delay + "s"
+		   	element[i].style.webkitAnimationDelay=theDelay;
+		    element[i].style.mozAnimationDelay=theDelay;
+		   	element[i].animationDelay=theDelay;
+
+		   	delay+=otherDelay;
+	   }
+	}
+}
 
 
+//ANIMATION FUNCTIONS
 function drawMask() {
-	var delay = 0;
+	var delay = 1;
 	var paths = document.querySelectorAll('.mask');
 	for (var i = paths.length - 1; i >= 0; i--) {
 		var length = paths[i].getTotalLength();
@@ -64,7 +104,10 @@ var paths = document.querySelectorAll('.mask');
 	};
 }
 
-drawMask();
+initialize();
+
+
+// drawMask();
 // reverseMask();
 
 // document.getElementById()

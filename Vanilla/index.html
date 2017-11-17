@@ -16,11 +16,11 @@
 	</nav> -->
 	<main >
 		<div class="shade introShade2"></div>
-		<!-- <div class="frame">
+		<div class="frame introItem1">
 			<div class="shade introShade"></div>
-		</div> -->
+		</div>
 		<div id="intro" style = "background: #050505 url(../images/chicagobw.gif) center no-repeat; background-attachment: fixed;">
-			<div class="introAnimation">
+			<div class="introAnimation framed">
 					<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 2428 1712" style="z-index:100">
 	   
 				     <clipPath id="clipped">
@@ -1156,13 +1156,10 @@
 					           C 236.00,479.00 343.00,983.00 388.00,999.00" />
 					</svg>		
 				</div>
-			<div class="introAnimationWrap" >
-				<h3>Hello, my name is</h3>
-				
-				<h3 >Ryan Moy | Web Developer</h3>
+			<div class="framed" >
+				<h2 class="introItem1">Hello, my name is</h2>
+				<h2 class="introItem1">Ryan Moy | Web Developer</h2>
 			</div>
-		
-			<h3 class="introButtons"><span onclick = "alert('ABOUT')">About</span> | <span onclick = "drawMask()">Resume</span> | <span onclick = "reverseMask()">Contact</span></h3>
 
 		</div>
 
@@ -1180,24 +1177,24 @@
 		      		<div class="diagonalR"></div>
 		      	</div> -->
 	      	</header>
-	      	<article>
-	      		<p><h2>Hi my name is Ryan Moy and I am a Junior Web Developer from Chicago, IL.</h2></p> 
-				<br>
-				<p><h3>I have a passion for the ART OF LEARNING that has led me on a neverending pursuit of knowledge.</h3></p>
-				<br>
-				<p>On my journey, I have gained experiences in many different industries in a search for a fulfilling career.</p>
-				<br>
-				<p><h3>I am a CREATOR and I find great joy in creating and building things that demand skills beyond my own.</h3></p>
-				<br>
-				<p>By a stroke of fate I stumbled into programming and found an ever evolving environment that could satisfy my thirst for knowledge and need for creativity.</p>
-				<br>
-				<p><h3>I am a LEADER who brings out the best in others by believing that everyone is capable of anything.</h3></p>
-				<br>
-				<p>I am also a cook, a baker, a triathlete, an artist, an explorer, and a student of philosophy.</p> 
-				<br>
-				<p><h2>But most of all, I am a DREAMER, and I look forward for the opportunity to help make YOUR dreams become reality.</h2></p>
-	      		
-	      	</article>
+	      	<div class="framed">
+		      	<article>
+		      		<h2>Hello, my name is Ryan Moy and I am a Junior Web Developer.</h2>
+					<br>
+					<h3>I have a passion for the ART OF LEARNING that has led me on a neverending pursuit of knowledge.</h3>
+					<br>
+					<h3>I am a CREATOR and I find great joy making and building things that demand skills beyond my own.</h3>
+					<br>
+					<h3>I am a LEADER who brings out the best in others by believing that everyone is capable of anything.</h3>
+					<br>
+					<p>I am also a cook, a baker, a triathlete, an artist, an explorer, and a husband.</p> 
+					<br>
+					<h2>But most of all, I am a DREAMER, and I look forward for the opportunity to help make YOUR dreams become reality.</h2>
+		      		
+		      	</article>
+			</div>
+		</section>
+		<section>
 			
 		</section>
 
@@ -1267,11 +1264,15 @@
 			
 			
 		</section>
+		<!-- <footer> -->
+		<h3 class="footButtons">
+			<span class="introItem2" onclick = "alert('HOME')">Home</span> <span class="introItem2">| </span><span class="introItem2" onclick = "alert('ABOUT')">About</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "drawMask()">Resume</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "reverseMask()">Contact</span>
+		</h3>
+		
+	<!-- </footer> -->
 		
 	</main>
-	<footer>
-		
-	</footer>
+
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
