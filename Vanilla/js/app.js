@@ -1,33 +1,59 @@
-function drawMask() {
-	var delay = 1.5;
-	var paths = document.querySelectorAll('.mask');
-	for (var i = paths.length - 1; i >= 0; i--) {
-		var length = paths[i].getTotalLength();
-		// Clear any previous transition
-		paths[i].style.transition = 'none';
-  		paths[i].style.WebkitTransition ='none';
 
-		// Set up the starting positions
-		paths[i].style.stroke = "white"
-		paths[i].style.strokeWidth = 70;
-		paths[i].style.strokeDasharray = length + ' ' + length;
-		paths[i].style.strokeDashoffset = length;
 
-		// Trigger a layout so styles are calculated & the browser picks up the starting position before animating
-		paths[i].getBoundingClientRect();
-		
-		// Define our transition
-		paths[i].style.clipPath = "url(#clipped)";
-
-		paths[i].style.transition = 'stroke-dashoffset .25s linear';
-		paths[i].style.WebkitTransition = 'stroke-dashoffset .25s linear';
-
-		var theDelay = delay + "s";
-		paths[i].style.WebkitTransitionDelay = theDelay;
-
-		delay += .27;
-		paths[i].style.strokeDashoffset = '0';
-	};
+function initialize(){
+	var introItems1 = document.querySelectorAll(".introAnim1");
+	var footButtons = document.querySelectorAll(".footButtons span");
+		fadeIn(introItems1, 0.5, 0.7)();
+		setTimeout(function(){
+			drawMask();
+			fadeIn(footButtons, 0.7, 0.3)();
+		},10.000);
 }
 
-drawMask();
+initialize();
+
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+};
+
+// example use
+
+	var intro = document.querySelector("#intro");
+	var introItem = document.querySelector('.introItem1');
+	var about = document.querySelector(".aboutContent");
+	var contact = document.querySelector("#contact");
+
+	var current = intro;
+
+function shiftTo(section){
+
+	var sectionTo;
+
+	if (section === "intro") {sectionTo = intro;}
+	if (section === "about") {sectionTo = about;}
+	if (section === "contact"){sectionTo = contact;}
+
+	fadeOut(current);
+	fadeIn2(sectionTo);
+	current = sectionTo;
+
+	// if (current === "intro" && section === "about"){
+	// 	introItem.classList += " moveLeft";
+
+	// 	setTimeout(function(){
+	// 		fadeIn2(about);
+	// 		setTimeout(function(){
+	// 			fadeOut(intro);
+	// 			setTimeout(function(){
+	// 				introItem.classList.remove("moveLeft");
+	// 				current = section;
+	// 			}, 500);
+	// 		} ,500);
+	// 	}, 500);
+	// }
+
+
+}
