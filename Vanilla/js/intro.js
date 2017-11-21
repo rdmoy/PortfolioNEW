@@ -28,6 +28,36 @@ return function(){
 	}
 }
 
+function fadeIn2(element) {
+    var opacity = 0;
+    function decrease () {
+        opacity += 0.05;
+        if (opacity >= 1){
+            // complete
+            element.style.opacity = 1;
+            return true;
+        }
+        element.style.opacity = opacity;
+        requestAnimationFrame(decrease);
+    }
+    decrease();
+}
+
+function fadeOut(element) {
+    var opacity = 1;
+    function decrease () {
+        opacity -= 0.05;
+        if (opacity <= 0){
+            // complete
+            element.style.opacity = 0;
+            return true;
+        }
+        element.style.opacity = opacity;
+        requestAnimationFrame(decrease);
+    }
+    decrease();
+}
+
 //ANIMATION FUNCTIONS
 function drawMask() {
 	var delay = 1;

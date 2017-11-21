@@ -1151,7 +1151,7 @@
 					        d="M 253.00,406.00
 					           C 236.00,479.00 343.00,983.00 388.00,999.00" />
 					</svg>		
-				</div>
+			</div>
 			<div class="framed" >
 				<h2 class="introAnim1 introItem1">Hello, my name is</h2>
 				<h2 class="introAnim1">Ryan Moy | Web Developer</h2>
@@ -1162,7 +1162,7 @@
 
 		<section id="about" class= "framed">
 	      	<!-- <div class="framed"> -->
-		      	<article class="content ">
+		      	<article class="aboutContent ">
 		      		<h2 class="matchIntro1">Hello, my name is Ryan Moy and I am a Junior Web Developer.</h2>
 					<br>
 					<h3>I have a passion for the ART OF LEARNING that has led me on a neverending pursuit of knowledge.</h3>
@@ -1171,17 +1171,35 @@
 					<br>
 					<h3>I am a LEADER who brings out the best in others by believing that everyone is capable of anything.</h3>
 					<br>
-					<p>I am also a cook, a baker, a triathlete, an artist, an explorer, and a husband.</p> 
-					<br>
-					<h2>But most of all, I am a DREAMER, and I look forward for the opportunity to help make YOUR dreams become reality.</h2>
+					<h2>I am a DREAMER, and I look forward for the opportunity to help make YOUR dreams become reality.</h2>
 		      		
 		      	</article>
 			<!-- </div> -->
 		</section>
 
+		<section id="contact" class="framed">
+			<h3>Thank you for stopping by!</h3> 
+				<h3>Please feel free to contact me, I'd love to tell you more about my dreams and learn more about yours!</h3>
+				<h3>I look forward to meeting you!</h3>
+				<form>
+					<br>
+					<div class="fields">
+						<h3><label>Name:</label><br>
+						<input type="text" name="name" required>
+						<br>
+						<label>Email:</label><br>
+						<input type="text" name="email" required><br>
+						<label>Message:</label><br>
+						<textarea name="message" required style="height:100px"></textarea>
+						<br>
+						<input type="submit" value="SEND" style="width:100px"></h3>
+					</div>
+				</form>
+		</section>
+
 		<!-- <footer> -->
 		<h3 class="footButtons">
-			<span class="introItem2" onclick = "aboutShift()">Home</span> <span class="introItem2">| </span><span class="introItem2" onclick = "alert('ABOUT')">About</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "drawMask()">Resume</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "reverseMask()">Contact</span>
+			<span class="introItem2" onclick = "shiftTo('intro')">Home</span> <span class="introItem2">| </span><span class="introItem2" onclick = "shiftTo('about')">About</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "drawMask()">Resume</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "shiftTo('contact')">Contact</span>
 		</h3>
 		
 	<!-- </footer> -->

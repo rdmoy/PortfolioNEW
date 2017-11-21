@@ -21,25 +21,39 @@ function offset(el) {
 
 // example use
 
+	var intro = document.querySelector("#intro");
+	var introItem = document.querySelector('.introItem1');
+	var about = document.querySelector(".aboutContent");
+	var contact = document.querySelector("#contact");
 
-function aboutShift(){
+	var current = intro;
 
-	var shiftTo = document.querySelector('.matchIntro1');
-	var shiftItem = document.querySelector('.introItem1');
-	var divOffset = offset(shiftTo);
-	var item = shiftItem.style.top;
-	var introAnimation = document.querySelector('.introAnimation');
-	var aboutContent = document.querySelector('.content');
+function shiftTo(section){
 
-	aboutContent.style.transition = 'none';
-	aboutContent.style.WebkitTransition ='none';
-	aboutContent.classList += "shiftIn";
-	introAnimation.classList += "shiftOut"
-	shiftItem.style.position = "absolute";
-	// shiftItem.style.top = divOffset.top;
-	shiftItem.style.left = divOffset.left;
+	var sectionTo;
 
+	if (section === "intro") {sectionTo = intro;}
+	if (section === "about") {sectionTo = about;}
+	if (section === "contact"){sectionTo = contact;}
 
+	fadeOut(current);
+	fadeIn2(sectionTo);
+	current = sectionTo;
+
+	// if (current === "intro" && section === "about"){
+	// 	introItem.classList += " moveLeft";
+
+	// 	setTimeout(function(){
+	// 		fadeIn2(about);
+	// 		setTimeout(function(){
+	// 			fadeOut(intro);
+	// 			setTimeout(function(){
+	// 				introItem.classList.remove("moveLeft");
+	// 				current = section;
+	// 			}, 500);
+	// 		} ,500);
+	// 	}, 500);
+	// }
 
 
 }

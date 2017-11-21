@@ -14,10 +14,9 @@ main
 
     width: 100%;
     height: 100%;
+    min-height: 600px;
 
     background-color: #050505;
-
-    min-height: 600px;
 }
 
 section
@@ -32,23 +31,6 @@ section
     text-align: center;
 }
 
-
-
-@keyframes pulse {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: #FF4136;
-  }
-}
-
-/*article
-{
-    min-width: 490px;
-    max-width: 700px;
-    background-color: black;
-}*/
 
 .frame
 {
@@ -97,10 +79,9 @@ section
     letter-spacing: 2px;
 
     opacity: .9;
+    color: white;
     /*background-color: black;*/
     text-shadow: 0 0 5px #050505;
-
-    color: white;
 }
 
 
@@ -111,10 +92,16 @@ section
 {
     position: absolute;
     bottom: 50px;
-	left:0;
+    left: 0;
+
     width: 100%;
     /*color: green;*/
     margin: auto;
+}
+
+.introItem1
+{
+    transition: 1s;
 }
 
 .introAnimation
@@ -134,18 +121,37 @@ svg
 
 /*ABOUT*/
 
-.content{
-	opacity:0;
+.aboutContent
+{
+    transition: 1s;
+
+    opacity: 0;
 }
 
-.shiftIn{
-	visibility:visible;
-	animation: fadeIn 1s forward;
-	animation: pulse 5s infinite;
+.moveLeft
+{
+    transform: translateX(-25%);
 }
 
-.shiftOut{
-	animation: fadeIn 1s reverse;
+/*CONTACT*/
+
+#contact{
+	opacity: 0;
+	transition: 1s;
+}
+
+.fields input,
+.fields textarea
+{
+    width: 75%;
+    height: 25px;
+}
+
+
+
+:focus
+{
+    outline: none;
 }
 
 /*FOOTER*/
@@ -160,25 +166,21 @@ svg
     bottom: 0;
 
     width: 100%;
+    /*padding-top:25px;*/
+    margin: auto;
     /*min-width:500px; */
     /*height:-top 75px;*/
 
     text-align: center;
     letter-spacing: 1px;
 
+    color: white;
     background-color: #050505;
-
-    color:white;
-
-    /*padding-top:25px;*/
-
-    margin: auto;
 }
 .footButtons span
 {
     /*margin: auto;*/
     vertical-align: middle;
-
 }
 
 
