@@ -8,18 +8,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<!-- <header id="header" class="">
-		
-	</header>
-	<nav>
-		
-	</nav> -->
-	<main >
-		<div class="shade introShade2"></div>
-		<div class="frame introItem1">
+	<main style = "background: #050505 url(../images/chicagobw.gif) center no-repeat; background-attachment: fixed;">
+		<!-- <div class="shade introShade2"></div> -->
+
+		<div class="frame introAnim1" >
 			<div class="shade introShade"></div>
 		</div>
-		<div id="intro" style = "background: #050505 url(../images/chicagobw.gif) center no-repeat; background-attachment: fixed;">
+
+		<section id="intro" >
 			<div class="introAnimation framed">
 					<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 2428 1712" style="z-index:100">
 	   
@@ -1157,29 +1153,17 @@
 					</svg>		
 				</div>
 			<div class="framed" >
-				<h2 class="introItem1">Hello, my name is</h2>
-				<h2 class="introItem1">Ryan Moy | Web Developer</h2>
+				<h2 class="introAnim1 introItem1">Hello, my name is</h2>
+				<h2 class="introAnim1">Ryan Moy | Web Developer</h2>
 			</div>
 
-		</div>
+		</section>
 
 
-		<section id="about">
-			<header>
-			
-				<div class="diagonals diagTop">
-		      		<!-- <div class="diagonal"></div>
-		      		<div class="diagonalR"></div -->>
-		      	</div>
-				<!-- <h2 class="sectionTitle">ABOUT</h2>
-				<div class="diagonals">
-		      		<div class="diagonal"></div>
-		      		<div class="diagonalR"></div>
-		      	</div> -->
-	      	</header>
-	      	<div class="framed">
-		      	<article>
-		      		<h2>Hello, my name is Ryan Moy and I am a Junior Web Developer.</h2>
+		<section id="about" class= "framed">
+	      	<!-- <div class="framed"> -->
+		      	<article class="content ">
+		      		<h2 class="matchIntro1">Hello, my name is Ryan Moy and I am a Junior Web Developer.</h2>
 					<br>
 					<h3>I have a passion for the ART OF LEARNING that has led me on a neverending pursuit of knowledge.</h3>
 					<br>
@@ -1192,87 +1176,18 @@
 					<h2>But most of all, I am a DREAMER, and I look forward for the opportunity to help make YOUR dreams become reality.</h2>
 		      		
 		      	</article>
-			</div>
-		</section>
-		<section>
-			
+			<!-- </div> -->
 		</section>
 
-
-		<section id="work">
-			<header style = "background: #050505 url(../images/flowers.jpg) center no-repeat ; background-size: cover">
-				<div class="diagonals diagTop">
-		      	<!-- 	<div class="diagonal"></div>
-		      		<div class="diagonalR"></div> -->
-		      	</div>
-				<h2 class="sectionTitle">WORK</h2>
-				<div class="diagonals">
-		      		<!-- <div class="diagonal"></div>
-		      		<div class="diagonalR"></div> -->
-		      	</div>
-	      	</header>
-	      	<article>
-	      		<div class="content" id="appTable">
-			<div class="workcol">
-				<div class="workcolcontent">
-					<h1>AHOY!</h1>
-					<img src="../images/pirateApp.png">
-					<h2>Pirate Translator</h2>
-					<h3 class="desc" >AHOY! is an application that uses a built in English to Pirate library and API on the server to translate English text to Pirate text on the client.</h3>
-				</div>
-				<div class="workcolmask" onclick="window.open('https://pirate-translator.herokuapp.com')"><h1>Click to open application</h1></div>
-			</div><!--
-				--><div class="workcol" >
-					<div class="workcolcontent">
-						<h1>Chat with Me!</h1>
-						<img src="../images/chatapp.gif">
-						<h2>Messaging App</h2>
-						<h3 class="desc">Chat with Me! is an instant messaging application that uses Node.js, socket.io, and Express.js to allow multiple users to join into a group message and chat with each other in real time. Upon entering, users are prompted for a username that becomes their avatar for the duration of their session. Session data is only stored for the current session.</h3>
-					</div>
-					<div class="workcolmask" onclick="window.open('https://rdmchatapp.herokuapp.com')")><h1>Click to open application</h1></div>
-				</div><!--
-				--><div class="workcol">
-					<div class="workcolcontent">
-						<h1>Let's Draw!</h1>
-						<img src="../images/drawApp.gif">
-						<h2>Drawing App</h2>
-						<h3 class="desc">Let's Draw! is a group drawing application that uses Node.js, socket.io, p5.js, and Express.js to allow users to collaborate on works of art together over the internet. All users start with a fresh canvas and are given a random color palette. Drawings made on the canvas will be mirrored on all current session users. Session data is only stored for the current session.</h3>
-					</div>
-					<div class="workcolmask" onclick="window.open('https://rdmdrawingapp.herokuapp.com/')"><h1>Click to open application</h1></div>
-				</div>
-			</div>
-	      		
-	      	</article>
-			
-			
-		</section>
-		<section id="contact">
-			<header>
-				<div class="diagonals diagTop">
-		      		<div class="diagonal"></div>
-		      		<div class="diagonalR"></div>
-		      	</div>
-				<h2 class="sectionTitle">CONTACT</h2>
-				<div class="diagonals">
-		      		<div class="diagonal"></div>
-		      		<div class="diagonalR"></div>
-		      	</div>
-	      	</header>
-	      	<article>
-	      		
-	      	</article>
-			
-			
-		</section>
 		<!-- <footer> -->
 		<h3 class="footButtons">
-			<span class="introItem2" onclick = "alert('HOME')">Home</span> <span class="introItem2">| </span><span class="introItem2" onclick = "alert('ABOUT')">About</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "drawMask()">Resume</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "reverseMask()">Contact</span>
+			<span class="introItem2" onclick = "aboutShift()">Home</span> <span class="introItem2">| </span><span class="introItem2" onclick = "alert('ABOUT')">About</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "drawMask()">Resume</span> <span class="introItem2">|</span> <span class="introItem2" onclick = "reverseMask()">Contact</span>
 		</h3>
 		
 	<!-- </footer> -->
 		
 	</main>
-
+	<script type="text/javascript" src="js/intro.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

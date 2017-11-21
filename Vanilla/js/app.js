@@ -1,113 +1,45 @@
+
+
 function initialize(){
+	var introItems1 = document.querySelectorAll(".introAnim1");
+	var footButtons = document.querySelectorAll(".footButtons span");
 		fadeIn(introItems1, 0.5, 0.7)();
 		setTimeout(function(){
 			drawMask();
-			fadeIn(footButtons, .7, 0.3)();
+			fadeIn(footButtons, 0.7, 0.3)();
 		},10.000);
-}
-var introItems1 = document.querySelectorAll(".introItem1");
-var footButtons = document.querySelectorAll(".footButtons span");
-
-function fadeIn(element, initDelay, otherDelay){
-
-	return function(){
-		var delay = initDelay;
-		for (var i=0; i< element.length; i++){
-			element[i].style.opacity="0";
-			/* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-			element[i].style.webkitAnimation="fadeIn ease 1"; 
-		    element[i].style.mozAnimation="fadeIn ease 1";
-		   	element[i].style.animation="fadeIn ease 1";
-
-		   	/* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-		    element[i].style.webkitAnimationFillMode="forwards"; 
-		    element[i].style.mozAnimationFillMode="forwards";
-		   	element[i].style.animationFillMode="forwards";
-
-		    element[i].style.webkitAnimationDuration="1s";
-		    element[i].style.mozAnimationDuration="1s";
-		   	element[i].animationDuration="1s";
-
-		   	var theDelay = delay + "s"
-		   	element[i].style.webkitAnimationDelay=theDelay;
-		    element[i].style.mozAnimationDelay=theDelay;
-		   	element[i].animationDelay=theDelay;
-
-		   	delay+=otherDelay;
-	   }
-	}
-}
-
-
-//ANIMATION FUNCTIONS
-function drawMask() {
-	var delay = 1;
-	var paths = document.querySelectorAll('.mask');
-	for (var i = paths.length - 1; i >= 0; i--) {
-		var length = paths[i].getTotalLength();
-		// Clear any previous transition
-		paths[i].style.transition = 'none';
-  		paths[i].style.WebkitTransition ='none';
-
-		// Set up the starting positions
-		paths[i].style.stroke = "#fdfbfb"
-		paths[i].style.strokeWidth = 70;
-		paths[i].style.strokeDasharray = length + ' ' + length;
-		paths[i].style.strokeDashoffset = length;
-
-		// Trigger a layout so styles are calculated & the browser picks up the starting position before animating
-		paths[i].getBoundingClientRect();
-		
-		// Define our transition
-		paths[i].style.clipPath = "url(#clipped)";
-
-		paths[i].style.transition = 'stroke-dashoffset .25s linear';
-		paths[i].style.WebkitTransition = 'stroke-dashoffset .25s linear';
-
-		var theDelay = delay + "s";
-		paths[i].style.WebkitTransitionDelay = theDelay;
-
-		delay += .27;
-		paths[i].style.strokeDashoffset = '0';
-	};
-}
-
-function reverseMask(){
-var delay = 0;
-var paths = document.querySelectorAll('.mask');
-	for (var i = 0; i <= paths.length - 1; i++) {
-		var length = paths[i].getTotalLength();
-		// Clear any previous transition
-		paths[i].style.transition = 'none';
-  		paths[i].style.WebkitTransition ='none';
-
-		// Set up the starting positions
-		paths[i].style.stroke = "#fdfbfb"
-		paths[i].style.strokeWidth = 70;
-		paths[i].style.strokeDasharray = length + ' ' + length;
-		paths[i].style.strokeDashoffset = "-" + length;
-
-		// Trigger a layout so styles are calculated & the browser picks up the starting position before animating
-		paths[i].getBoundingClientRect();
-		
-		// Define our transition
-		paths[i].style.clipPath = "url(#clipped)";
-
-		paths[i].style.transition = 'stroke-dashoffset .25s linear';
-		paths[i].style.WebkitTransition = 'stroke-dashoffset .25s linear';
-
-		var theDelay = delay + "s";
-		paths[i].style.WebkitTransitionDelay = theDelay;
-
-		delay += .27;
-		paths[i].style.strokeDashoffset = '0';
-	};
 }
 
 initialize();
 
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+};
 
-// drawMask();
-// reverseMask();
+// example use
 
-// document.getElementById()
+
+function aboutShift(){
+
+	var shiftTo = document.querySelector('.matchIntro1');
+	var shiftItem = document.querySelector('.introItem1');
+	var divOffset = offset(shiftTo);
+	var item = shiftItem.style.top;
+	var introAnimation = document.querySelector('.introAnimation');
+	var aboutContent = document.querySelector('.content');
+
+	aboutContent.style.transition = 'none';
+	aboutContent.style.WebkitTransition ='none';
+	aboutContent.classList += "shiftIn";
+	introAnimation.classList += "shiftOut"
+	shiftItem.style.position = "absolute";
+	// shiftItem.style.top = divOffset.top;
+	shiftItem.style.left = divOffset.left;
+
+
+
+
+}
